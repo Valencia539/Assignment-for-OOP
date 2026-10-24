@@ -1,0 +1,14 @@
+D:\APPS\VS CODE\IG\Assignment ni IG\bin\Debug\net10.0\Assignment ni IG.exe
+D:\APPS\VS CODE\IG\Assignment ni IG\bin\Debug\net10.0\Assignment ni IG.deps.json
+D:\APPS\VS CODE\IG\Assignment ni IG\bin\Debug\net10.0\Assignment ni IG.runtimeconfig.json
+D:\APPS\VS CODE\IG\Assignment ni IG\bin\Debug\net10.0\Assignment ni IG.dll
+D:\APPS\VS CODE\IG\Assignment ni IG\bin\Debug\net10.0\Assignment ni IG.pdb
+D:\APPS\VS CODE\IG\Assignment ni IG\obj\Debug\net10.0\Assignment ni IG.GeneratedMSBuildEditorConfig.editorconfig
+D:\APPS\VS CODE\IG\Assignment ni IG\obj\Debug\net10.0\Assignment ni IG.AssemblyInfoInputs.cache
+D:\APPS\VS CODE\IG\Assignment ni IG\obj\Debug\net10.0\Assignment ni IG.AssemblyInfo.cs
+D:\APPS\VS CODE\IG\Assignment ni IG\obj\Debug\net10.0\Assignment ni IG.csproj.CoreCompileInputs.cache
+D:\APPS\VS CODE\IG\Assignment ni IG\obj\Debug\net10.0\Assignment ni IG.dll
+D:\APPS\VS CODE\IG\Assignment ni IG\obj\Debug\net10.0\refint\Assignment ni IG.dll
+D:\APPS\VS CODE\IG\Assignment ni IG\obj\Debug\net10.0\Assignment ni IG.pdb
+D:\APPS\VS CODE\IG\Assignment ni IG\obj\Debug\net10.0\Assignment ni IG.genruntimeconfig.cache
+D:\APPS\VS CODE\IG\Assignment ni IG\obj\Debug\net10.0\ref\Assignment ni IG.dll
