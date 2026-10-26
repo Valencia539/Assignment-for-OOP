@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net;
 
 class Program
 {
@@ -14,13 +15,33 @@ class Program
         cleaningRobot.Recharge(100);
         cleaningRobot.Recharge(100);
         deliveryRobot.Recharge(10);
+        
+        cleaningRobot.PerformTask();
+        cleaningRobot.PerformTask();
+
+        deliveryRobot.PerformTask();
+        deliveryRobot.PerformTask();
+        deliveryRobot.PerformTask();
+        deliveryRobot.PerformTask();
+        deliveryRobot.PerformTask();
+        deliveryRobot.PerformTask();
+        deliveryRobot.PerformTask();
+        deliveryRobot.PerformTask();
+        deliveryRobot.PerformTask();
+        deliveryRobot.PerformTask();
+        deliveryRobot.PerformTask();
+        deliveryRobot.PerformTask();
+        deliveryRobot.PerformTask();
+
 
         List<Robot> robots = new List<Robot>{cleaningRobot, deliveryRobot};
 
-        Console.WriteLine("\nName of Robots:");
+        Console.WriteLine("\nRobots:");
         foreach (Robot robot in robots)
         {
-            Console.WriteLine(robot.Name);
+            Console.WriteLine("===============================");
+            Console.WriteLine("Name of Robot: " + robot.Name);
+            Console.WriteLine("===============================");
         }
     }
 }
@@ -41,8 +62,9 @@ abstract class Robot
 
     protected void UseEnergy(int amount)
     {
-        _battery.Consume(amount);
-        Console.WriteLine($"Remaining Energy of {Name}: {_battery.RemainingEnergy}");
+            _battery.Consume(amount);
+            Console.WriteLine($"Remaining Energy of {Name}: {_battery.RemainingEnergy}");
+        
     }
 
     public abstract void PerformTask();
@@ -56,7 +78,6 @@ class CleaningRobot : Robot
     }
     public override void PerformTask()
     {
-        Console.WriteLine($"{Name} cleans and uses 10 energy.");
         UseEnergy(10);
     }
 }
@@ -68,9 +89,8 @@ class DeliveryRobot : Robot
         Console.WriteLine($"A delivery robot named {name} is created.");
     }
     public override void PerformTask()
-    {
-        Console.WriteLine($"{Name} delivers and uses 25 energy.");
-        UseEnergy(25);
+    {   
+        UseEnergy(10);
     }
 }
 
@@ -109,7 +129,16 @@ class LithiumBattery : IBattery
     {
         if (amount > 0)
         {
-            RemainingEnergy -= amount;
+            if (RemainingEnergy <= 0)
+            {
+                Console.WriteLine("The robot is out of energy.");
+                return;
+            }
+            else
+            {
+                RemainingEnergy -= amount;
+                Console.WriteLine($"The robot consumed {amount} energy.");
+            }
         }
     }
 
@@ -117,7 +146,15 @@ class LithiumBattery : IBattery
     {
         if (amount > 0)
         {
-            RemainingEnergy += amount;
+            if(RemainingEnergy >= 100)
+            {
+                return;
+            }
+            else
+            {
+                RemainingEnergy += amount;
+                Console.WriteLine($"The robot recharged {amount} energy.");
+            }
         }
     }
 }
@@ -149,7 +186,16 @@ class SolarBattery : IBattery
     {
         if (amount > 0)
         {
-            RemainingEnergy -= amount;
+            if (RemainingEnergy <= 0)
+            {
+                Console.WriteLine("The robot is out of energy.");
+                return;
+            }
+            else
+            {
+                RemainingEnergy -= amount;
+                Console.WriteLine($"The robot consumed {amount} energy.");
+            }
         }
     }
 
@@ -157,7 +203,15 @@ class SolarBattery : IBattery
     {
         if (amount > 0)
         {
-            RemainingEnergy += amount;
+            if(RemainingEnergy >= 100)
+            {
+                return;
+            }
+            else
+            {
+                RemainingEnergy += amount;
+                Console.WriteLine($"The robot recharged {amount} energy.");
+            }
         }
     }
 }
