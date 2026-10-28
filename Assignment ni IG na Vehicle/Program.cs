@@ -19,8 +19,8 @@ class Program
 
             double cost = vehicle.calculateRentalCost(3);
 
-            Console.WriteLine(
-                $"Cost for {3} days: {cost:F2}\n");
+            Console.Write(
+                $"Cost for 3 days: {cost:F2}\n");
         }
 
         Customer customer = new Customer("Alice", "AB1234");
